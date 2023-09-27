@@ -1,0 +1,363 @@
+@font-face {
+  font-family: robotoMonoMedium;
+  src: url(/fonts/RobotoMono-Medium.ttf);
+}
+
+@font-face {
+  font-family: robotoMonoRegular;
+  src: url(/fonts/RobotoMono-Regular.ttf);
+}
+
+@font-face {
+  font-family: robotoRegular;
+  src: url(/fonts/Roboto-Regular.ttf);
+}
+
+
+:root{
+  --dark-01: #ffc700;
+  --dark-02: #181818;
+  --dark-03: #f8f8f8;
+  --sky-01: #d4e6ff;
+  --sky-02: #ffe6db;
+  --sky-03: #e34e0e;
+  --sky-04: #0053cc;
+}
+
+::selection{
+  color: var(--dark-02);
+  background: var(--dark-03);
+
+}
+
+::-webkit-scrollbar{
+  background: transparent;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+body{
+  background: var(--dark-02);
+  scroll-behavior: smooth;
+  transition: all 1s ease;
+}
+
+/* Content Body */
+.content-body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  width: 100%;
+  margin-top: 3%;
+  margin-bottom: 20px;
+  & .theme-content{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 20px;
+    .content{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+      .content-items{
+        display: flex;
+        justify-content: center;
+        gap: 100px;
+      }
+    }
+    & #label-toggle{
+      color: var(--sky-02);
+      font-size: 30px;
+      cursor: pointer;
+    }
+    & #toggle{
+      display: none;
+    }
+  }
+}
+
+/* Header */
+.header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  & .title-header{
+    color: var(--dark-03);
+    text-align: center;
+    font-size: 28px;
+    font-family: 'robotoMonoRegular';
+    font-weight: 600;
+    width: 220px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+  & .header-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    & .img-avatar{
+      object-fit: cover;
+      width: 200px;
+      clip-path: circle(50%);
+    }
+  }
+  & .img-text{
+    color: var(--dark-03);
+    font-size: 20px;
+    font-family: 'robotoMonoRegular';
+    font-weight: 500;
+    max-width: 350px;
+  }
+}
+
+.links{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  & .link-linkedin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'robotoMonoMedium';
+    font-size: 22px;
+    background: var(--dark-01);
+    color: var(--dark-02);
+    width: 490px;
+    padding: 10px 0;
+    border-radius: 6px;
+    &:hover{
+      transition: 0.3s ease-in-out;
+      transform: translateY(-5px);
+    }
+  }
+  & .link-trabajos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'robotoMonoMedium';
+    font-size: 22px;
+    background: var(--dark-03);
+    color: var(--dark-02);
+    width: 490px;
+    padding: 10px 0;
+    border-radius: 6px;
+    &:hover{
+      transition: 0.3s ease-in-out;
+      transform: translateY(-5px);
+    }
+  }
+  & .link-email{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 490px;
+    font-family: 'robotoMonoMedium';
+    font-size: 22px;
+    background: var(--dark-03);
+    color: var(--dark-02);
+    padding: 10px 0;
+    border-radius: 6px;
+    &:hover{
+      transition: 0.3s ease-in-out;
+      transform: translateY(-5px);
+    }
+  }
+  & .link-sitio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 490px;
+    font-family: 'robotoMonoMedium';
+    font-size: 22px;
+    background: var(--dark-03);
+    color: var(--dark-02);
+    padding: 10px 0;
+    border-radius: 6px;
+    &:hover{
+      transition: 0.3s ease-in-out;
+      transform: translateY(-5px);
+    }
+  }
+}
+
+.follow{
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  & .folw-links{
+    font-size: 36px;
+    color: var(--dark-01);
+    &:hover{
+      transition: 0.4s ease-in;
+      transform: rotate(10deg);
+    }
+  }
+}
+
+/* Theme light */
+.light{
+  background: var(--dark-03);
+  color: #181818;
+  & .header{
+    & .title-header{
+      color: var(--dark-02);
+    }
+    & .img-text{
+      color: var(--dark-02);
+    }
+  }
+  & .links{
+    & .link-linkedin{
+      background: var(--sky-01);
+      color: var(--sky-04);
+    }
+    & .link-trabajos{
+      background: var(--sky-02);
+      color: var(--sky-03);
+    }
+    & .link-email{
+      background: var(--sky-02);
+      color: var(--sky-03);
+    }
+    & .link-sitio{
+      background: var(--sky-02);
+      color: var(--sky-03);
+    }
+  }
+  & .follow{
+    & .folw-links{
+      color: var(--sky-03);
+    }
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 996px) {
+  .content-body{
+    .theme-content{
+      .content{
+        .content-items{
+          gap: 50px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 926px) {
+  .header-content{
+    & .img-avatar{
+      object-fit: cover;
+      width: 50px;
+      clip-path: circle(50%);
+    }
+  }
+
+  .links{
+    gap: 30px;
+    & .link-linkedin{
+      width: 420px;
+      padding: 10px 0;
+    }
+    & .link-trabajos{
+      width: 420px;
+      padding: 10px 0;
+    }
+    & .link-email{
+      width: 420px;
+      padding: 10px 0;
+    }
+    & .link-sitio{
+      width: 420px;
+      padding: 10px 0;
+    }
+  }
+}
+
+@media (max-width: 852px) {
+  .content-body{
+    margin-top: 10%;
+    margin-bottom: 20px;
+    .theme-content{
+      .content{
+        .content-items{
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 440px){
+  .links{
+    gap: 30px;
+    & .link-linkedin{
+      width: 350px;
+      padding: 10px;
+    }
+    & .link-trabajos{
+      width: 350px;
+      padding: 10px;
+    }
+    & .link-email{
+      width: 350px;
+      padding: 10px;
+    }
+    & .link-sitio{
+      width: 350px;
+      padding: 10px;
+    }
+  }
+  .follow{
+    gap: 35px;
+    & .folw-links{
+      font-size: 30px;
+    }
+  }
+}
+
+@media (max-width: 400px){
+  .header{
+    & .img-text{
+      max-width: 300px;
+    }
+  }
+
+  .links{
+    gap: 30px;
+    & .link-linkedin{
+      width: 300px;
+      padding: 10px;
+    }
+    & .link-trabajos{
+      width: 300px;
+      padding: 10px;
+    }
+    & .link-email{
+      width: 300px;
+      padding: 10px;
+    }
+    & .link-sitio{
+      width: 300px;
+      padding: 10px;
+    }
+  }
+}
