@@ -1,12 +1,13 @@
 
 # Template - Links
 
-Template made in HTML - CSS - Javascript, a landing page for personal links, with dark and light theme.
+Plantilla realizada en HTML - CSS - Javascript, una página de aterrizaje para enlaces personales, con tema oscuro y claro.
+Cambia a la informacion que necesites agregar, como el 'avatar.png'.
 
 
 ## Feedback
 
-If you have any feedback, please reach out to us at richarmiguelrodriguez@gmail.com, with subject 'Template links'.
+Si tiene algún comentario, comuníquese conmigo a richarmiguelrodriguez@gmail.com, con el asunto "Template Links".
 
 
 ## Demo
